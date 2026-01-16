@@ -21,7 +21,7 @@ about:
 
 Hello!
 
-I am a Master’s student in Geospatial Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.
+I am a Master’s student in Geomatics for Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.
 
 I have professional and research experience in environmental management, conservation, and data analysis, including an internship with MRF (Marine Research Foundation) in Malaysia where I worked on spatio-temporal analyses to support fisheries conservation and policy. I am particularly interested in community-driven research, environmental justice, and the role of geospatial technologies in supporting equitable and sustainable decision-making.
 
