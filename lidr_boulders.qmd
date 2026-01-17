@@ -60,3 +60,5 @@ rgl.close()
         style="border:0;">
 </iframe>
 ```
+
+The same workflow can be replicated in valleys anywhere to try and find new bouldering zones.
