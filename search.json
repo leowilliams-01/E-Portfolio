@@ -54,5 +54,26 @@
     "title": "Content & Deliverables",
     "section": "",
     "text": "You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:\n\n\n&lt;iframe width=\"900\" height=\"700\"\nsrc=\"https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool\"&gt;\n&lt;/iframe&gt;\n\nThe full-screen GEE application is available here in case you’re interested.\n(To use the GEE tool, navigate to any city you’d like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)"
+  },
+  {
+    "objectID": "lidr_boulders.html",
+    "href": "lidr_boulders.html",
+    "title": "LiDAR Boulder Project",
+    "section": "",
+    "text": "This is a personal project trying to find new bouldering zones in Squamish, BC. I am using publicly available LiDAR datasets (LidarBC) to create high resolution Digital Terrain Models (DTMs). 3D renders of these DTMs allow for terrain below the forest canopy to be studied and find hidden boulders!\nIn order to both create the DTMs and vizualize them I rely on the lidR package in R studio."
+  },
+  {
+    "objectID": "lidr_boulders.html#goals",
+    "href": "lidr_boulders.html#goals",
+    "title": "LiDAR Boulder Project",
+    "section": "",
+    "text": "This is a personal project trying to find new bouldering zones in Squamish, BC. I am using publicly available LiDAR datasets (LidarBC) to create high resolution Digital Terrain Models (DTMs). 3D renders of these DTMs allow for terrain below the forest canopy to be studied and find hidden boulders!\nIn order to both create the DTMs and vizualize them I rely on the lidR package in R studio."
+  },
+  {
+    "objectID": "lidr_boulders.html#what-it-looks-like",
+    "href": "lidr_boulders.html#what-it-looks-like",
+    "title": "LiDAR Boulder Project",
+    "section": "What it looks like",
+    "text": "What it looks like\nThis may take a while to get running because there’s billions of points in this point cloud…\n\n#|echo: false\nlibrary(lidR)\n\nWarning: package 'lidR' was built under R version 4.5.2\n\napronbloc &lt;- readLAS(\"C:/Users/lwill01.stu/OneDrive - UBC/Documents/GitHub/E-Portfolio/data/squam_laz/apron_laz.laz\")\napron_dtm &lt;- rasterize_terrain(apronbloc, 0.3, tin())\n\nOnce we rasterize the terrain we can plot out DTM in 2D.\n\nplot(apron_dtm)\n\nWarning in plot.window(...): \"zebra\" is not a graphical parameter\n\n\nWarning in plot.xy(xy, type, ...): \"zebra\" is not a graphical parameter\n\n\nWarning in title(...): \"zebra\" is not a graphical parameter\n\n\n\n\n\n\n\n\n\nThe next snippet of code lets us pan around the 3D render of the DTM and look boulders beneath the forest canopy.\n\nplot_dtm3d(apron_dtm)"
   }
 ]
