@@ -188,7 +188,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-it-looks-like" class="level2">
 <h2 class="anchored" data-anchor-id="what-it-looks-like">What it looks like</h2>
 <p>This may take a while to get running because there’s billions of points in this point cloud…</p>
-<p>Once we rasterize the terrain we can plot out DTM in 2D.</p>
+<p>The first step is creating a DTM so we can see whats going on at the surface below the forest canopy.</p>
+<p>Here is my DTM in 2D. You can see the areas of increased elevation where the bigger boulders are.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(apron_dtm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
@@ -199,9 +200,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Lets pan around an existing boulder that is hidden in the forest. This here is the Cacodemon boulder in Squamish with loads of famous routes on it.</p>
+<p>It is way more fun, and easier to see whats going on in 3D. The biggest boulder here is the Cacodemon boulder in Squamish with loads of famous routes on it.</p>
 <iframe src="dtm3d.html" width="100%" height="600" style="border:0;">
 </iframe>
+<p>The same workflow can be replicated in valleys anywhere to try and find new bouldering zones.</p>
 
 
 </section>

@@ -74,6 +74,6 @@
     "href": "lidr_boulders.html#what-it-looks-like",
     "title": "LiDAR Boulder Project",
     "section": "What it looks like",
-    "text": "What it looks like\nThis may take a while to get running because there’s billions of points in this point cloud…\nOnce we rasterize the terrain we can plot out DTM in 2D.\n\nplot(apron_dtm)\n\n\n\n\n\n\n\n\nLets pan around an existing boulder that is hidden in the forest. This here is the Cacodemon boulder in Squamish with loads of famous routes on it."
+    "text": "What it looks like\nThis may take a while to get running because there’s billions of points in this point cloud…\nThe first step is creating a DTM so we can see whats going on at the surface below the forest canopy.\nHere is my DTM in 2D. You can see the areas of increased elevation where the bigger boulders are.\n\nplot(apron_dtm)\n\n\n\n\n\n\n\n\nIt is way more fun, and easier to see whats going on in 3D. The biggest boulder here is the Cacodemon boulder in Squamish with loads of famous routes on it.\n\n\nThe same workflow can be replicated in valleys anywhere to try and find new bouldering zones."
   }
 ]
