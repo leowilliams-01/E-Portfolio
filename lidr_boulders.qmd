@@ -61,4 +61,4 @@ rgl.close()
 </iframe>
 ```
 
-The same workflow can be replicated in valleys anywhere to try and find new bouldering zones.
+The same workflow can be replicated anywhere as long as the LiDAR data exists.
