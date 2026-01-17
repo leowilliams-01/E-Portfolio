@@ -14,8 +14,8 @@ In order to both create the DTMs and vizualize them I rely on the lidR package i
 
 This may take a while to get running because there's billions of points in this point cloud...
 
-```{r}
-#|echo: false
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+
 library(lidR)
 
 apronbloc <- readLAS("C:/Users/lwill01.stu/OneDrive - UBC/Documents/GitHub/E-Portfolio/data/squam_laz/apron_laz.laz")
@@ -23,14 +23,40 @@ apron_dtm <- rasterize_terrain(apronbloc, 0.3, tin())
 
 ```
 
-Once we rasterize the terrain we can plot out DTM in 2D.
+The first step is creating a DTM so we can see whats going on at the surface below the forest canopy.
 
-```{r}
+Here is my DTM in 2D. You can see the areas of increased elevation where the bigger boulders are.
+
+```{r,warning=FALSE}
 plot(apron_dtm)
 ```
 
-The next snippet of code lets us pan around the 3D render of the DTM and look boulders beneath the forest canopy.
+It is way more fun, and easier to see whats going on in 3D. The biggest boulder here is the Cacodemon boulder in Squamish with loads of famous routes on it.
 
-```{r}
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+
+
+
+library(rgl)
+library(htmltools)
+
 plot_dtm3d(apron_dtm)
+
+htmlwidgets::saveWidget(
+  rglwidget(),
+  "dtm3d.html",
+  selfcontained = FALSE
+)
+
+rgl.close()
+
+
+```
+
+```{=html}
+<iframe src="dtm3d.html"
+        width="100%"
+        height="600"
+        style="border:0;">
+</iframe>
 ```
