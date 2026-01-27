@@ -1,0 +1,12 @@
+---
+title: "Mangrove Mapping Research"
+image: images/mangrovexanthophloea.jpg
+format: html
+editor: visual
+---
+
+## Investigating Mangrove Dynamics in Cacheu, Guinea Bissau and their Drivers
+
+This research project was done throughout the Autumn of 2025 and Spring of 2026 in association with Blue Ventures.
+
+## Abstract

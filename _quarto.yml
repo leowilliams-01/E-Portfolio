@@ -12,6 +12,8 @@ website:
         text: Publications
       - href: lidr_boulders.qmd
         text: LiDAR Boulder Project
+      - href: mangrovemapping.qmd
+        text: Mangrove Mapping Research
 
 format:
   html:
