@@ -8,9 +8,6 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/leo-williams-geospatial/
-    - icon: instagram
-      text: Instagram
-      href: https://www.instagram.com/leowilliams01/
     - icon: github
       text: GitHub
       href: https://github.com/leowilliams-01

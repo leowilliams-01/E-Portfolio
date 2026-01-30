@@ -5,8 +5,14 @@ format: html
 editor: visual
 ---
 
-## Investigating Mangrove Dynamics in Cacheu, Guinea Bissau and their Drivers
-
-This research project was done throughout the Autumn of 2025 and Spring of 2026 in association with Blue Ventures.
+This research project began in the Autumn of 2025 and will be completed in the Spring of 2026. The research was my main project for my masters program at the University of British Colombia and done in association with Blue Ventures.
 
 ## Abstract
+
+## Methods
+
+In order to assess mangrove dynamics and their drivers, a three phase methodology is implemented. This study makes use of the mangrove mapping tool designed by Phase one begins with pre-processing where we determine the ROI which in this case is the Cacheu region in Northern Guinea-Bissau and apply appropriate masks to excluded regions. We also select spectral indices to apply to our Sentinel-2 imagery necessary for mangrove classification. These indices are laid out in table 1 below. The final step in phase one is assigning classification reference areas (CRAs) with which we train the random forest classifier.
+
+Phase two revolves around the processing of our inputs. W
+
+## Preliminary Results
