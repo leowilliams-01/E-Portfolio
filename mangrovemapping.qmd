@@ -15,4 +15,4 @@ In order to assess mangrove dynamics and their drivers, a three phase methodolog
 
 Phase two revolves around the processing of our inputs.
 
-## Preliminary Results
+## Results

@@ -8,8 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: publications.qmd
-        text: Publications
+      - href: resume.qmd
+        text: Resume
       - href: lidr_boulders.qmd
         text: LiDAR Boulder Project
       - href: mangrovemapping.qmd
