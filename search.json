@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Leo Williams",
     "section": "",
-    "text": "Hello!\nI am a Master’s student in Geomatics for Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.\nI have professional and research experience in environmental management, conservation, and data analysis, including an internship with MRF (Marine Research Foundation) in Malaysia where I worked on spatio-temporal analyses to support fisheries conservation and policy. I am particularly interested in community-driven research, environmental justice, and the role of geospatial technologies in supporting equitable and sustainable decision-making.\nOutside of academics, I am an avid rock climber and enjoy spending time outdoors. I value interdisciplinary work, collaboration, and using technical skills to contribute to meaningful environmental action."
+    "text": "Hello!\nI am a Master’s student in Geomatics for Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, computer science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.\nI have professional and research experience in environmental management, conservation, and data analysis, including an internship with MRF (Marine Research Foundation) in Malaysia where I worked on spatio-temporal analyses to support fisheries conservation and policy. I am particularly interested in community-driven research, environmental justice, and the role of geospatial technologies in supporting equitable and sustainable decision-making.\nOutside of work and academics, I am an avid rock climber and enjoy spending time outdoors."
   },
   {
     "objectID": "resume.html",
@@ -74,6 +74,34 @@
     "href": "lidr_boulders.html#what-it-looks-like",
     "title": "LiDAR Boulder Project",
     "section": "What it looks like",
-    "text": "What it looks like\nThis may take a while to get running because there’s billions of points in this point cloud…\nThe first step is creating a DTM so we can see whats going on at the surface below the forest canopy.\nHere is my DTM in 2D. You can see the areas of increased elevation where the bigger boulders are.\n\nplot(apron_dtm)\n\n\n\n\n\n\n\n\nIt is way more fun, and easier to see whats going on in 3D. The biggest boulder here is the Cacodemon boulder in Squamish with loads of famous routes on it.\n\n\nThe same workflow can be replicated in valleys anywhere to try and find new bouldering zones."
+    "text": "What it looks like\nThis may take a while to get running because there’s billions of points in this point cloud…\nThe first step is creating a DTM so we can see whats going on at the surface below the forest canopy.\nHere is my DTM in 2D. You can see the areas of increased elevation where the bigger boulders are.\n\nplot(apron_dtm)\n\n\n\n\n\n\n\n\nIt is way more fun, and easier to see whats going on in 3D. The biggest boulder here is the Cacodemon boulder in Squamish with loads of famous routes on it.\n\n\nThe same workflow can be replicated anywhere as long as the LiDAR data exists.\nI repeated the workflow with a zone in Quebec I am very familiar with known as ‘The Crown’.\nOnce again, I begin with a DTM.\n\nplot(crown_dtm)\n\nWarning in plot.window(...): \"zebra\" is not a graphical parameter\n\n\nWarning in plot.xy(xy, type, ...): \"zebra\" is not a graphical parameter\n\n\nWarning in title(...): \"zebra\" is not a graphical parameter\n\n\n\n\n\n\n\n\n\nAnd can now visualize that DTM in 3D with the lidR package.\nplot_dtm3d(crown_dtm)\n&lt;iframe src=\"crown_dtm3d.html\"\n        width=\"100%\"\n        height=\"600\"\n        style=\"border:0;\"&gt;\n&lt;/iframe&gt;\nThis zone displays some of the limitations of the DTM for finding boulders. The proximity of the climbing area to houses makes it difficult to delineate differences between the two. Consequently, some knowledge of the area will be useful in identifying new climbing zones, especially in more built areas."
+  },
+  {
+    "objectID": "mangrovemapping.html",
+    "href": "mangrovemapping.html",
+    "title": "Mangrove Mapping Research",
+    "section": "",
+    "text": "This research project began in the Autumn of 2025 and will be completed in the Spring of 2026. The research was my main project for my masters program at the University of British Colombia and done in association with Blue Ventures."
+  },
+  {
+    "objectID": "mangrovemapping.html#abstract",
+    "href": "mangrovemapping.html#abstract",
+    "title": "Mangrove Mapping Research",
+    "section": "Abstract",
+    "text": "Abstract"
+  },
+  {
+    "objectID": "mangrovemapping.html#methods",
+    "href": "mangrovemapping.html#methods",
+    "title": "Mangrove Mapping Research",
+    "section": "Methods",
+    "text": "Methods\nIn order to assess mangrove dynamics and their drivers, a three phase methodology is implemented. This study makes use of the mangrove mapping tool designed by Phase one begins with pre-processing where we determine the ROI which in this case is the Cacheu region in Northern Guinea-Bissau and apply appropriate masks to excluded regions. We also select spectral indices to apply to our Sentinel-2 imagery necessary for mangrove classification. These indices are laid out in table 1 below. The final step in phase one is assigning classification reference areas (CRAs) with which we train the random forest classifier.\nPhase two revolves around the processing of our inputs."
+  },
+  {
+    "objectID": "mangrovemapping.html#results",
+    "href": "mangrovemapping.html#results",
+    "title": "Mangrove Mapping Research",
+    "section": "Results",
+    "text": "Results"
   }
 ]

@@ -44,7 +44,7 @@ plot_dtm3d(apron_dtm)
 
 htmlwidgets::saveWidget(
   rglwidget(),
-  "dtm3d.html",
+  "apron_dtm3d.html",
   selfcontained = FALSE
 )
 
@@ -54,7 +54,7 @@ rgl.close()
 ```
 
 ```{=html}
-<iframe src="dtm3d.html"
+<iframe src="apron_dtm3d.html"
         width="100%"
         height="600"
         style="border:0;">
@@ -62,3 +62,51 @@ rgl.close()
 ```
 
 The same workflow can be replicated anywhere as long as the LiDAR data exists.
+
+I repeated the workflow with a zone in Quebec I am very familiar with known as 'The Crown'.
+
+Once again, I begin with a DTM.
+
+```{r, echo=FALSE,warning=FALSE,message=FALSE}
+library(raster)
+crown <- readLAS("C:/Users/lwill01.stu/OneDrive - UBC/Documents/GitHub/E-Portfolio/data/squam_laz/crown_laz_clip.laz")
+# Estimated rectangle from your red outline (adjust if needed)
+
+crown_dtm <- rasterize_terrain(crown, 0.2, tin())
+
+
+```
+
+```{r}
+plot(crown_dtm)
+```
+
+And can now visualize that DTM in 3D with the lidR package.
+
+plot_dtm3d(crown_dtm)
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+
+library(rgl)
+library(htmltools)
+
+plot_dtm3d(crown_dtm)
+
+htmlwidgets::saveWidget(
+  rglwidget(),
+  "crown_dtm3d.html",
+  selfcontained = FALSE
+)
+
+rgl.close()
+```
+
+``` html
+<iframe src="crown_dtm3d.html"
+        width="100%"
+        height="600"
+        style="border:0;">
+</iframe>
+```
+
+This zone displays some of the limitations of the DTM for finding boulders. The proximity of the climbing area to houses makes it difficult to delineate differences between the two. Consequently, some knowledge of the area will be useful in identifying new climbing zones, especially in more built areas.

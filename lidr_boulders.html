@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LiDAR Boulder Project – Your E-Portfolio</title>
+<title>LiDAR Boulder Project – Leo Williams E-Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Your E-Portfolio</span>
+    <span class="navbar-title">Leo Williams E-Portfolio</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -130,12 +130,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
-<span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="./resume.html"> 
+<span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./lidr_boulders.html" aria-current="page"> 
 <span class="menu-text">LiDAR Boulder Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./mangrovemapping.html"> 
+<span class="menu-text">Mangrove Mapping Research</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -201,9 +205,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>It is way more fun, and easier to see whats going on in 3D. The biggest boulder here is the Cacodemon boulder in Squamish with loads of famous routes on it.</p>
-<iframe src="dtm3d.html" width="100%" height="600" style="border:0;">
+<iframe src="apron_dtm3d.html" width="100%" height="600" style="border:0;">
 </iframe>
-<p>The same workflow can be replicated in valleys anywhere to try and find new bouldering zones.</p>
+<p>The same workflow can be replicated anywhere as long as the LiDAR data exists.</p>
+<p>I repeated the workflow with a zone in Quebec I am very familiar with known as ‘The Crown’.</p>
+<p>Once again, I begin with a DTM.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crown_dtm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in plot.window(...): "zebra" is not a graphical parameter</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in plot.xy(xy, type, ...): "zebra" is not a graphical parameter</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in title(...): "zebra" is not a graphical parameter</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lidr_boulders_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>And can now visualize that DTM in 3D with the lidR package.</p>
+<p>plot_dtm3d(crown_dtm)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"crown_dtm3d.html"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ot">        width</span><span class="op">=</span><span class="st">"100%"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ot">        height</span><span class="op">=</span><span class="st">"600"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">        style</span><span class="op">=</span><span class="st">"border:0;"</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This zone displays some of the limitations of the DTM for finding boulders. The proximity of the climbing area to houses makes it difficult to delineate differences between the two. Consequently, some knowledge of the area will be useful in identifying new climbing zones, especially in more built areas.</p>
 
 
 </section>
