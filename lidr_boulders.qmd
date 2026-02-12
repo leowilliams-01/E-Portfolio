@@ -77,13 +77,11 @@ crown_dtm <- rasterize_terrain(crown, 0.2, tin())
 
 ```
 
-```{r}
+```{r,warning=FALSE}
 plot(crown_dtm)
 ```
 
 And can now visualize that DTM in 3D with the lidR package.
-
-plot_dtm3d(crown_dtm)
 
 ```{r,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -101,7 +99,7 @@ htmlwidgets::saveWidget(
 rgl.close()
 ```
 
-``` html
+```{=html}
 <iframe src="crown_dtm3d.html"
         width="100%"
         height="600"
