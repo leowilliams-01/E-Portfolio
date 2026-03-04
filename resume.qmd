@@ -2,38 +2,109 @@
 title: "Resume"
 ---
 
-# Education
+markdown---
+title: "CV"
+format: html
+editor: visual
+---
 
--   List your education here.
+## Leo Williams
 
-# Publications
+leo.williams.1122@gmail.com | [LinkedIn](https://www.linkedin.com/in/leo-williams-geospatial/) | [E-Portfolio](https://leowilliams-01.github.io/E-Portfolio/)
 
-*Peer-reviewed publications:*
+---
 
--   List any peer-reviewed publications here.
+## Career Summary
 
-*Reports:*
+Environmental Scientist with graduate training in Geomatics for Environmental Management. I strive to further advance environmental and social justice. My understanding of ecology and environmental systems is complemented by strong skills in geospatial analysis, spatial data management, and environmental mapping. Living and working across four different continents have given me strong traits of adaptability, communication, and the ability to collaborate effectively in diverse and dynamic environments.
 
--   List any non-peer reviewed materials you'd like to share here.
+---
 
-# Conferences & Talks
+## Education
 
-*Invited Talks*
+**Master of Geomatics for Environmental Management** | University of British Columbia | *Expected 2026*
 
--   If you've been invited to speak in a professional setting, list that here.
+**BSc Environmental Geography** | Concordia University | *2024*
 
-*Conference Presentations*
+---
 
--   If the presentation was at a conference, list them here.
+## Technical Skills
 
-# Awards & Honors
+**GIS & Spatial Tools** | ArcGIS Pro, ArcGIS Desktop/Online, ESRI Field Maps, QGIS, FME, Google Earth Engine
 
--   List any scholarships, bursaries, etc.
+**Programming & Data** | Python (ArcPy, geospatial workflows), R, SQL
 
-# Teaching Assistantships
+**LiDAR & Remote Sensing** | LiDAR (lidR, terrain modelling), Raster analysis, Terrain Modelling
 
--   List any TA positions you may have held.
+**Web & Visualization** | Professional Map Layout Design, HTML, CSS, JavaScript
 
-# Institutional Service
+---
 
--   Volunteering etc.
+## Languages
+
+English (Fluent) | French (Fluent) | Spanish (Proficient)
+
+---
+
+## Work Experience
+
+**Teaching Assistant (Geomatics)** | University of British Columbia, Vancouver | *2026 - Present*
+
+- Lead laboratory sessions for NRES 341 (Intermediate Geomatics for Natural Resource Management).
+- Support students in applying remote sensing data and GIS workflows in ArcGIS Pro for spatial analysis and environmental mapping.
+- Provide guidance on coordinate systems, projections, and spatial data transformations.
+
+**Researcher** | Blue Ventures, Guinea-Bissau | *2025 - Present*
+
+- Geospatial analysis of mangrove ecosystem dynamics using multi-temporal satellite imagery.
+- Develop reproducible classification workflows in Google Earth Engine to map mangrove extent and canopy structure.
+- Conduct change detection analysis to quantify loss, gain, and persistence.
+- Produce high-quality cartographic outputs and spatial summaries.
+- Validate random forest classification through accuracy assessment and confusion matrix evaluation.
+
+**Green Brigade Ambassador** | Enuf, Montreal | *March - August 2025*
+
+- Educated high school students on proper waste sorting and composting practices as part of Enuf's Green Brigade Sustainability Program.
+
+**Intern** | Marine Research Foundation, Malaysia | *April - August 2024*
+
+- Performed spatio-temporal analysis of shark and ray bycatch within fisheries around Malaysia.
+- Mapped data used to inform time-area closure conservation policies for MPAs.
+
+**Intern** | Virunga National Park, Democratic Republic of Congo | *April - August 2024*
+
+- Created a sales database with three years of data for a workshop staffed by widows of Park Rangers killed in the field.
+
+**Supervisor** | Allez Up Centre Escalade, Montreal | *August 2022 - December 2024*
+
+- Working at the front desk and as a Barista.
+- Instructed weekly bouldering classes at the beginner and intermediate levels.
+
+---
+
+## Relevant Projects
+
+**LiDAR-Based Terrain Modelling** | Squamish, BC
+
+- Processed large LiDAR point cloud datasets using R (lidR) to generate high-resolution DTMs.
+- Performed terrain feature extraction and raster analysis workflows.
+
+**Mangrove Classification & Change Detection** | Guinea-Bissau
+
+- Processed multi-temporal satellite imagery (Sentinel-2) and trained a random forest algorithm to classify mangrove forests in West Africa.
+- Generated classified raster outputs.
+- Produced final cartographic deliverables following professional mapping standards.
+
+---
+
+## Professional Development
+
+**FME Skills Workshop** | Vancouver | *2025*
+
+---
+
+## Additional Skills
+
+- PADI Rescue Diver
+- Mountain Leadership Course (Scotland, 2016)
+
