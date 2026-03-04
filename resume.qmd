@@ -2,11 +2,7 @@
 title: "Resume"
 ---
 
-markdown---
-title: "CV"
-format: html
-editor: visual
----
+
 
 ## Leo Williams
 
