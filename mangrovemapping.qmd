@@ -5,14 +5,32 @@ format: html
 editor: visual
 ---
 
-This research project began in the Autumn of 2025 and will be completed in the Spring of 2026. The research was my main project for my masters program at the University of British Colombia and done in association with Blue Ventures.
+This research project began in the Autumn of 2025 and will be completed in the Spring of 2026. The research was my main project for my masters program at the University of British Columbia and done in association with Blue Ventures.
 
 ## Abstract
 
+Mangroves are among the most ecologically and climatically significant ecosystems on Earth, yet they remain under persistent threat from both anthropogenic pressure and environmental change. This study quantifies mangrove dynamics across the Cacheu region of northern Guinea-Bissau between 2020 and 2025, using the Google Earth Engine Mangrove Mapping Methodology (GEM) applied to Sentinel-2 satellite imagery. Seven land cover classes were mapped using a Random Forest classifier, and dynamics of loss, gain, and persistence were assessed across the study period. Results reveal a net decline in total mangrove extent of 13.23%, from 123,375 ha to 107,047 ha, driven primarily by losses along mangrove margins in the eastern sub-region. Conversely, the western sub-region exhibited signs of canopy densification, with widespread transitions from open to closed canopy classes. Land cover transition analysis suggests that mangrove loss is linked to both conversion for rice paddy agriculture and exposure of barren earth, while mangrove gain is sourced largely from recovering terrestrial vegetation. Both classified maps exceeded the 90% accuracy threshold, with overall accuracies of 97.51% (2020) and 95.22% (2025).
+
 ## Methods
 
-In order to assess mangrove dynamics and their drivers, a three phase methodology is implemented. This study makes use of the mangrove mapping tool designed by Phase one begins with pre-processing where we determine the ROI which in this case is the Cacheu region in Northern Guinea-Bissau and apply appropriate masks to excluded regions. We also select spectral indices to apply to our Sentinel-2 imagery necessary for mangrove classification. These indices are laid out in table 1 below. The final step in phase one is assigning classification reference areas (CRAs) with which we train the random forest classifier.
+Mangrove dynamics across the Cacheu region were assessed using a three-phase methodology built around the Google Earth Engine Mangrove Mapping Methodology (GEM). In Phase 1, pre-processing began by defining a region of interest (ROI) along the coastal zone of northern Guinea-Bissau, applying a 20 km inland buffer to capture the full mangrove extent, and applying topographic and water masks to exclude non-relevant areas. Six spectral indices derived from dry-season Sentinel-2 imagery (January to February, 2020 and 2025) were then selected for classification, including NDVI, MNDWI, CMRI, SAVI, LSWI, and MMRI. Seven land cover classes were defined: Closed Canopy Mangrove (CCM), Open Canopy Mangrove I (OCM I, 30 to 60% canopy cover), Open Canopy Mangrove II (OCM II, less than 30% canopy cover), Terrestrial Vegetation, Rice Paddies, Barren/Exposed, and Residual Water. Classification Reference Areas (CRAs) were then established as training data for a Random Forest classifier run through Google Earth Engine.
 
-Phase two revolves around the processing of our inputs.
+Phase 2 identified the drivers of observed dynamics through a land cover transition analysis and a spatial distribution analysis of the resulting dynamics maps. The Sankey diagram was used to trace flows between land cover classes across the two time steps, while spatial patterns of gain, loss, and persistence were examined through visual interpretation of two sub-regions (western and eastern Cacheu) and cross-referenced with transition data. Phase 3 assessed classification accuracy using the 30% of CRAs withheld from the Random Forest algorithm. Maps falling below a 90% accuracy threshold were revised until the threshold was met.
+
+![Figure 1 – Workflow diagram outlining the three-phase GEM methodology applied in this study.](images/GEM_Workflow.drawio.png){fig-align="center"}
 
 ## Results
+
+Classification of Sentinel-2 imagery produced land cover maps for 2020 and 2025 (Figure 2), revealing a net mangrove decline of 13.23%, from 123,375 ha (44% of the ROI) in 2020 to 107,047 ha (38%) in 2025. Of the 2020 mangrove extent, 69.07% persisted through to 2025, while 30.93% was lost and 17.69% was gained as new mangrove area. Closed Canopy Mangrove expanded from 21% to 24% of the ROI, while both open canopy classes declined, with OCM I falling from 12% to 10% and OCM II from 11% to just 4%. Terrestrial vegetation, rice paddies, and residual water remained broadly stable, while barren earth increased from 4% to 6%.
+
+The land cover transition analysis (Figure 4) shows that the dominant transition across the study period was from OCM II to terrestrial vegetation, concentrated heavily in the eastern sub-region, where losses followed the ends of the riparian mangrove network with little evidence of recovery (Figures 3 and 6). In contrast, the western sub-region exhibited canopy densification, with a broad shift from open to closed canopy classes suggesting forest recovery rather than areal expansion (Figure 5). Mangrove gains were primarily sourced from terrestrial vegetation (900 ha) and rice paddies (402 ha), pointing to natural regeneration and possible agricultural abandonment as recovery mechanisms. Both classified maps exceeded the 90% accuracy threshold, achieving overall accuracies of 97.51% (Kappa: 0.97) in 2020 and 95.22% (Kappa: 0.94) in 2025.
+
+![Figure 2 – Land cover maps of the full Cacheu study region in 2020 and 2025, showing the decline of bright green OCM II as the dominant visible transition.](images/Classmaps_200226.jpg){fig-align="center" width="100%"}
+
+![Figure 3 – Mangrove dynamics map displaying loss, gain, and persistence across the ROI. Persistence dominates core stands, gains are distributed throughout stand interiors, and losses concentrate at mangrove margins.](images/dyanic_final.jpg){fig-align="center" width="100%"}
+
+![Figure 4 – Sankey diagram illustrating land cover class transitions between 2020 and 2025. The largest flow is from OCM II to Terrestrial Vegetation.](images/final_sankey.png){fig-align="center" width="90%"}
+
+![Figure 5 – Western Cacheu sub-region land cover comparison (2020 vs. 2025), showing canopy densification with a broad shift from open to closed canopy mangrove classes.](images/InsetClassChange_WesternCacheu.jpg){fig-align="center" width="100%"}
+
+![Figure 6 – Eastern Cacheu sub-region land cover comparison (2020 vs. 2025), showing concentrated mangrove loss along the riparian network with minimal gain.](images/InsetClassChange_EasternCacheu.jpg){fig-align="center" width="100%"}
