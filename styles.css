@@ -53,26 +53,44 @@ body {
   border-bottom: 2px solid #1a1a1a;
 }
 
-/* ── Hero section (index page) ── */
+/* ── Hero section ── */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  min-height: 88vh;
-  padding: 4rem 0;
+  gap: 2.5rem;
+  min-height: 45vh;
+  padding: 3rem 0 2.5rem 0;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+.hero-image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  margin: 0;
+}
+
 .hero-text h1 {
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   font-weight: 300;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: #1a1a1a;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border: none;
+  white-space: nowrap;
 }
 
 .hero-text h1 span {
@@ -81,11 +99,11 @@ body {
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555555;
-  max-width: 48ch;
-  line-height: 1.85;
-  margin-bottom: 2rem;
+  max-width: 44ch;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
 }
 
 .hero-links {
@@ -95,7 +113,7 @@ body {
 }
 
 .hero-links a {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -108,19 +126,6 @@ body {
 .hero-links a:hover {
   color: #2d5a4e;
   border-color: #2d5a4e;
-}
-
-.hero-image {
-  position: relative;
-}
-
-.hero-image img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-  margin: 0;
 }
 
 /* ── Project grid (index page) ── */

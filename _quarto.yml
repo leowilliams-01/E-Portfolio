@@ -3,10 +3,10 @@ project:
   output-dir: C:\Users\lwill01.stu\OneDrive - UBC\Documents\GitHub\E-Portfolio
 
 website:
-  title: "Leo Williams"
+  title: ""
   navbar:
-    background: "#2d4a3e"
-    foreground: "#f0ede6"
+    background: "#ffffff"
+    foreground: "#1a1a1a"
     left:
       - href: index.qmd
         text: Home
@@ -18,7 +18,6 @@ website:
         text: Mangrove Mapping
       - href: lidarmetrics.qmd
         text: LiDAR Terrain & Biomass
-
 format:
   html:
     theme: flatly

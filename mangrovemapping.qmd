@@ -1,6 +1,6 @@
 ---
 title: "Mangrove Mapping Research"
-image: images/mangrovexanthophloea.jpg
+image: images/mangrove_xanthophloea.png
 format: html
 editor: visual
 ---
