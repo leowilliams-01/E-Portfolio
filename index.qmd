@@ -9,7 +9,7 @@ editor: visual
 <div class="hero">
   <div class="hero-text">
     <h1>Leo<br><span>Williams</span></h1>
-    <p>Master's student in Geomatics for Environmental Management at UBC. I use satellite imagery, LiDAR, and machine learning to understand and protect ecosystems — from mangrove forests in West Africa to old-growth forest in British Columbia.</p>
+    <p>Master's student in Geomatics for Environmental Management at UBC. </p>
     <div class="hero-links">
       <a href="resume.html">Resume</a>
       <a href="https://www.linkedin.com/in/leo-williams-geospatial/" target="_blank">LinkedIn</a>
