@@ -41,7 +41,7 @@ editor: visual
     </a>
 
     <a href="lidarmetrics.html" style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 2px; overflow: hidden; text-decoration: none; display: block; border-bottom: none;">
-      <img src="images/chm_afrf.png" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; margin: 0; border-radius: 0; box-shadow: none;"/>
+      <img src="images/CHM_afrf.png" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; margin: 0; border-radius: 0; box-shadow: none;"/>
       <div style="padding: 1rem 1.25rem 1.25rem;">
         <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #2d5a4e; margin-bottom: 0.3rem;">LiDAR · R · Predictive Modelling</div>
         <div style="font-size: 0.95rem; font-weight: 500; color: #1a1a1a; margin-bottom: 0.4rem;">LiDAR Terrain & Biomass Modelling</div>
