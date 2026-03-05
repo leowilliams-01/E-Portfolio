@@ -14,7 +14,8 @@ website:
         text: LiDAR Boulder Project
       - href: mangrovemapping.qmd
         text: Mangrove Mapping Research
-
+      - href: lidarmetrics.qmd
+        text: Model Creation from LiDAR Metrics
 format:
   html:
     theme: flatly
