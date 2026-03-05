@@ -1,119 +1,117 @@
 /* ── Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Colour palette ──
+   Deep forest green  #2d4a3e
+   Mid green          #4a7c6f
+   Sage               #8aab9b
+   Warm cream         #f0ede6
+   Soft sand          #e2d9c8
+   Dark text          #2a2a2a
+*/
 
 /* ── Base ── */
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #2a2a2a;
+  background-color: #f0ede6;
   line-height: 1.8;
-  font-size: 0.95rem;
 }
 
 /* ── Navbar ── */
 .navbar {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 1.1rem 2.5rem;
-  background-color: #ffffff !important;
+  border-bottom: 3px solid #4a7c6f;
+  padding: 0.75rem 2rem;
 }
 
 .navbar-brand {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #1a1a1a !important;
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f0ede6 !important;
 }
 
 .navbar-nav .nav-link {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #1a1a1a !important;
-  margin: 0 0.8rem;
-  transition: opacity 0.2s ease;
+  color: #f0ede6 !important;
+  margin: 0 0.4rem;
+  transition: color 0.2s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  opacity: 0.45;
-  color: #1a1a1a !important;
+  color: #8aab9b !important;
 }
 
-/* ── Page title ── */
+/* ── Page titles ── */
 h1.title {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #1a1a1a;
-  letter-spacing: 0.02em;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  border-bottom: none;
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #2d4a3e;
+  margin-bottom: 0.3rem;
+  border-bottom: 2px solid #8aab9b;
+  padding-bottom: 0.5rem;
 }
 
 /* ── Section headings ── */
 h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #1a1a1a;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  border-left: none;
-  padding-left: 0;
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d4a3e;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #4a7c6f;
+  padding-left: 0.75rem;
 }
 
 h3 {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: #4a7c6f;
   margin-top: 1.5rem;
 }
 
 /* ── Body text ── */
 p {
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: #1a1a1a;
-  margin-bottom: 1.4rem;
-  max-width: 72ch;
-  line-height: 1.85;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  max-width: 80ch;
 }
 
 /* ── Links ── */
 a {
-  color: #1a1a1a;
+  color: #4a7c6f;
   text-decoration: none;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
 a:hover {
-  border-bottom: 1px solid #1a1a1a;
+  color: #2d4a3e;
+  border-bottom: 1px solid #4a7c6f;
 }
 
 /* ── Code blocks ── */
 pre {
-  background-color: #f7f7f7;
-  border: none;
-  border-radius: 2px;
-  padding: 1.2rem 1.5rem;
-  font-size: 0.82rem;
-  line-height: 1.7;
+  background-color: #e2d9c8;
+  border: 1px solid #8aab9b;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
 }
 
 code {
-  background-color: #f7f7f7;
-  color: #1a1a1a;
+  background-color: #e2d9c8;
+  color: #2d4a3e;
   padding: 0.15em 0.4em;
-  border-radius: 2px;
-  font-size: 0.85em;
+  border-radius: 3px;
+  font-size: 0.88em;
 }
 
 pre code {
@@ -123,62 +121,47 @@ pre code {
 
 /* ── Table of contents ── */
 #TOC {
-  background-color: #ffffff;
-  border: none;
-  border-left: 1px solid #e0e0e0;
-  padding: 0 0 0 1.25rem;
-  font-size: 0.82rem;
-}
-
-#TOC .toc-title {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #999999;
-  margin-bottom: 0.75rem;
+  background-color: #e2d9c8;
+  border: 1px solid #8aab9b;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
 }
 
 #TOC a {
-  color: #999999;
-  border-bottom: none;
+  color: #2d4a3e;
 }
 
 #TOC a:hover {
-  color: #1a1a1a;
+  color: #4a7c6f;
 }
 
 /* ── Figures ── */
 img {
-  border-radius: 0;
-  box-shadow: none;
-  margin: 2rem 0 0.5rem 0;
-  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  margin: 1.5rem 0;
 }
 
 .figure-caption {
-  font-size: 0.78rem;
-  color: #999999;
-  font-style: normal;
-  text-align: left;
-  margin-top: 0.4rem;
-  margin-bottom: 2rem;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
+  color: #4a7c6f;
+  font-style: italic;
+  text-align: center;
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Main content area ── */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
 /* ── Horizontal rules ── */
 hr {
   border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 3rem 0;
-}
-
-/* ── Main content spacing ── */
-.page-columns .column-body {
-  padding-top: 2rem;
-}
-
-/* ── Bold text ── */
-strong {
-  font-weight: 500;
+  border-top: 1px solid #8aab9b;
+  margin: 2rem 0;
 }

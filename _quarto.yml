@@ -5,8 +5,8 @@ project:
 website:
   title: "Leo Williams"
   navbar:
-    background: "#ffffff"
-    foreground: "#1a1a1a"
+    background: "#2d4a3e"
+    foreground: "#f0ede6"
     left:
       - href: index.qmd
         text: Home
