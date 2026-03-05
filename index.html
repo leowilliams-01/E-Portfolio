@@ -35,6 +35,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -122,44 +123,68 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/profilepic.jpg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Leo Williams</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header>
-    <div class="about-links">
-  <a href="https://www.linkedin.com/in/leo-williams-geospatial/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/leowilliams-01" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="mailto:leo.williams.1122@gmail.com" class="about-link" rel="" target="">
-    <i class="bi bi-envelope-at"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Hello!</p>
-<p>I am a Master’s student in Geomatics for Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, computer science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.</p>
-<p>I have professional and research experience in environmental management, conservation, and data analysis, including an internship with MRF (Marine Research Foundation) in Malaysia where I worked on spatio-temporal analyses to support fisheries conservation and policy. I am particularly interested in community-driven research, environmental justice, and the role of geospatial technologies in supporting equitable and sustainable decision-making.</p>
-<p>Outside of work and academics, I am an avid rock climber and enjoy spending time outdoors.</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Leo<br><span>Williams</span></h1></header>
 
 
-</main></div>
+
+
+<div class="hero">
+  <div class="hero-text">
+    
+    <p>Master's student in Geomatics for Environmental Management at UBC. I use satellite imagery, LiDAR, and machine learning to understand and protect ecosystems — from mangrove forests in West Africa to old-growth forest in British Columbia.</p>
+    <div class="hero-links">
+      <a href="resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/leo-williams-geospatial/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/leowilliams-01" target="_blank">GitHub</a>
+      <a href="mailto:leo.williams.1122@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/profilepic.jpg" alt="Leo Williams">
+  </div>
 </div>
- <!-- /main -->
+
+<div class="section-label">Selected Projects</div>
+
+<div class="project-grid">
+  <a class="project-card" href="mangrovemapping.html">
+    <img class="project-card-img" src="images/Classmaps_200226.jpg" alt="Mangrove Mapping">
+    <div class="project-card-body">
+      <div class="project-card-tag">Remote Sensing · GEE · Random Forest</div>
+      <div class="project-card-title">Mangrove Mapping &amp; Change Detection</div>
+      <p class="project-card-desc">Quantifying mangrove dynamics across Guinea-Bissau between 2020 and 2025 using Sentinel-2 imagery and the GEM methodology.</p>
+    </div>
+  </a>
+  <a class="project-card" href="lidarmetrics.html">
+    <img class="project-card-img" src="images/chm_afrf.png" alt="LiDAR Biomass">
+    <div class="project-card-body">
+      <div class="project-card-tag">LiDAR · R · Predictive Modelling</div>
+      <div class="project-card-title">LiDAR Terrain &amp; Biomass Modelling</div>
+      <p class="project-card-desc">Building wall-to-wall predictions of above-ground biomass and dominant tree height across the Alex Fraser Research Forest.</p>
+    </div>
+  </a>
+  <a class="project-card" href="lidr_boulders.html">
+    <img class="project-card-img" src="images/lidar_boulders_preview.jpg" alt="LiDAR Boulders">
+    <div class="project-card-body">
+      <div class="project-card-tag">LiDAR · Terrain Analysis · R</div>
+      <div class="project-card-title">LiDAR Boulder Detection</div>
+      <p class="project-card-desc">Detecting and characterising boulders from high-resolution LiDAR point clouds in Squamish, BC.</p>
+    </div>
+  </a>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

@@ -1,25 +1,53 @@
 ---
-title: "Leo Williams"
-image: images/profilepic.jpg
-about:
-  template: trestles
-  image-width: 20em
-  links: 
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/leo-williams-geospatial/
-    - icon: github
-      text: GitHub
-      href: https://github.com/leowilliams-01
-    - icon: envelope-at
-      text: Email
-      href: mailto:leo.williams.1122@gmail.com
+title: ""
+format:
+  html:
+    toc: false
+editor: visual
 ---
+```{=html}
+<div class="hero">
+  <div class="hero-text">
+    <h1>Leo<br><span>Williams</span></h1>
+    <p>Master's student in Geomatics for Environmental Management at UBC. I use satellite imagery, LiDAR, and machine learning to understand and protect ecosystems — from mangrove forests in West Africa to old-growth forest in British Columbia.</p>
+    <div class="hero-links">
+      <a href="resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/leo-williams-geospatial/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/leowilliams-01" target="_blank">GitHub</a>
+      <a href="mailto:leo.williams.1122@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/profilepic.jpg" alt="Leo Williams"/>
+  </div>
+</div>
 
-Hello!
+<div class="section-label">Selected Projects</div>
 
-I am a Master’s student in Geomatics for Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, computer science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.
-
-I have professional and research experience in environmental management, conservation, and data analysis, including an internship with MRF (Marine Research Foundation) in Malaysia where I worked on spatio-temporal analyses to support fisheries conservation and policy. I am particularly interested in community-driven research, environmental justice, and the role of geospatial technologies in supporting equitable and sustainable decision-making.
-
-Outside of work and academics, I am an avid rock climber and enjoy spending time outdoors.
+<div class="project-grid">
+  <a class="project-card" href="mangrovemapping.html">
+    <img class="project-card-img" src="images/Classmaps_200226.jpg" alt="Mangrove Mapping"/>
+    <div class="project-card-body">
+      <div class="project-card-tag">Remote Sensing · GEE · Random Forest</div>
+      <div class="project-card-title">Mangrove Mapping & Change Detection</div>
+      <p class="project-card-desc">Quantifying mangrove dynamics across Guinea-Bissau between 2020 and 2025 using Sentinel-2 imagery and the GEM methodology.</p>
+    </div>
+  </a>
+  <a class="project-card" href="lidarmetrics.html">
+    <img class="project-card-img" src="images/chm_afrf.png" alt="LiDAR Biomass"/>
+    <div class="project-card-body">
+      <div class="project-card-tag">LiDAR · R · Predictive Modelling</div>
+      <div class="project-card-title">LiDAR Terrain & Biomass Modelling</div>
+      <p class="project-card-desc">Building wall-to-wall predictions of above-ground biomass and dominant tree height across the Alex Fraser Research Forest.</p>
+    </div>
+  </a>
+  <a class="project-card" href="lidr_boulders.html">
+    <img class="project-card-img" src="images/lidar_boulders_preview.jpg" alt="LiDAR Boulders"/>
+    <div class="project-card-body">
+      <div class="project-card-tag">LiDAR · Terrain Analysis · R</div>
+      <div class="project-card-title">LiDAR Boulder Detection</div>
+      <p class="project-card-desc">Detecting and characterising boulders from high-resolution LiDAR point clouds in Squamish, BC.</p>
+    </div>
+  </a>
+</div>
+```

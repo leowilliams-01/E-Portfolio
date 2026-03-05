@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Leo Williams",
+    "title": "LeoWilliams",
     "section": "",
-    "text": "Hello!\nI am a Master’s student in Geomatics for Environmental Management (MGEM) at the University of British Columbia, with a Bachelor of Science in Environmental Geography from Concordia University. My academic background combines environmental science, computer science, remote sensing, and geospatial analysis, with a strong focus on applying spatial tools to real-world environmental and social challenges.\nI have professional and research experience in environmental management, conservation, and data analysis, including an internship with MRF (Marine Research Foundation) in Malaysia where I worked on spatio-temporal analyses to support fisheries conservation and policy. I am particularly interested in community-driven research, environmental justice, and the role of geospatial technologies in supporting equitable and sustainable decision-making.\nOutside of work and academics, I am an avid rock climber and enjoy spending time outdoors."
+    "text": "Master's student in Geomatics for Environmental Management at UBC. I use satellite imagery, LiDAR, and machine learning to understand and protect ecosystems — from mangrove forests in West Africa to old-growth forest in British Columbia.\n    \n      Resume\n      LinkedIn\n      GitHub\n      Email\n    \n  \n  \n    \n  \n\n\nSelected Projects\n\n\n  \n    \n    \n      Remote Sensing · GEE · Random Forest\n      Mangrove Mapping & Change Detection\n      Quantifying mangrove dynamics across Guinea-Bissau between 2020 and 2025 using Sentinel-2 imagery and the GEM methodology.\n    \n  \n  \n    \n    \n      LiDAR · R · Predictive Modelling\n      LiDAR Terrain & Biomass Modelling\n      Building wall-to-wall predictions of above-ground biomass and dominant tree height across the Alex Fraser Research Forest.\n    \n  \n  \n    \n    \n      LiDAR · Terrain Analysis · R\n      LiDAR Boulder Detection\n      Detecting and characterising boulders from high-resolution LiDAR point clouds in Squamish, BC."
   },
   {
     "objectID": "resume.html",
