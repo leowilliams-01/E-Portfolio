@@ -1,0 +1,167 @@
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Colour palette ──
+   Deep forest green  #2d4a3e
+   Mid green          #4a7c6f
+   Sage               #8aab9b
+   Warm cream         #f0ede6
+   Soft sand          #e2d9c8
+   Dark text          #2a2a2a
+*/
+
+/* ── Base ── */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  color: #2a2a2a;
+  background-color: #f0ede6;
+  line-height: 1.8;
+}
+
+/* ── Navbar ── */
+.navbar {
+  border-bottom: 3px solid #4a7c6f;
+  padding: 0.75rem 2rem;
+}
+
+.navbar-brand {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f0ede6 !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f0ede6 !important;
+  margin: 0 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #8aab9b !important;
+}
+
+/* ── Page titles ── */
+h1.title {
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #2d4a3e;
+  margin-bottom: 0.3rem;
+  border-bottom: 2px solid #8aab9b;
+  padding-bottom: 0.5rem;
+}
+
+/* ── Section headings ── */
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d4a3e;
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #4a7c6f;
+  padding-left: 0.75rem;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #4a7c6f;
+  margin-top: 1.5rem;
+}
+
+/* ── Body text ── */
+p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  max-width: 80ch;
+}
+
+/* ── Links ── */
+a {
+  color: #4a7c6f;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  color: #2d4a3e;
+  border-bottom: 1px solid #4a7c6f;
+}
+
+/* ── Code blocks ── */
+pre {
+  background-color: #e2d9c8;
+  border: 1px solid #8aab9b;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+code {
+  background-color: #e2d9c8;
+  color: #2d4a3e;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* ── Table of contents ── */
+#TOC {
+  background-color: #e2d9c8;
+  border: 1px solid #8aab9b;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-size: 0.88rem;
+}
+
+#TOC a {
+  color: #2d4a3e;
+}
+
+#TOC a:hover {
+  color: #4a7c6f;
+}
+
+/* ── Figures ── */
+img {
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  margin: 1.5rem 0;
+}
+
+.figure-caption {
+  font-size: 0.85rem;
+  color: #4a7c6f;
+  font-style: italic;
+  text-align: center;
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Main content area ── */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ── Horizontal rules ── */
+hr {
+  border: none;
+  border-top: 1px solid #8aab9b;
+  margin: 2rem 0;
+}
