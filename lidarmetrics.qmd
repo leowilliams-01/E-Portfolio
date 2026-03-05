@@ -58,9 +58,21 @@ model_AGB <- lm(Total_AGB ~ zq95 + zkurt, data = data_table)
 model_domH <- lm(Dominant_Height ~ zq95, data = data_table)
 ```
 
-**AGB model:** Total AGB = -361,904.73 + 15,020.66 \* zq95 + 35,671.60 \* zkurt (R² = 0.469, Adjusted R² = 0.439)
+$$
+\text{Total AGB} = -361{,}904.73 + 15{,}020.66 \times z_{q95} + 35{,}671.60 \times z_{kurt}
+$$
 
-**Dominant height model:** Dominant Height = 3.555 + 0.910 \* zq95 (R² = 0.703, Adjusted R² = 0.695)
+$$
+R^2 = 0.469 \qquad R^2_{\text{adj}} = 0.439
+$$
+
+$$
+\text{Dominant Height} = 3.555 + 0.910 \times z_{q95}
+$$
+
+$$
+R^2 = 0.703 \qquad R^2_{\text{adj}} = 0.695
+$$
 
 The dominant height model landed a really solid R² of 0.70 with just a single predictor, which speaks to how well upper canopy height percentiles capture actual tree height in a structurally complex forest.
 

@@ -104,6 +104,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -247,8 +276,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dominant height model — zq95 alone wins out</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>model_domH <span class="ot">&lt;-</span> <span class="fu">lm</span>(Dominant_Height <span class="sc">~</span> zq95, <span class="at">data =</span> data_table)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>AGB model:</strong> Total AGB = -361,904.73 + 15,020.66 * zq95 + 35,671.60 * zkurt (R² = 0.469, Adjusted R² = 0.439)</p>
-<p><strong>Dominant height model:</strong> Dominant Height = 3.555 + 0.910 * zq95 (R² = 0.703, Adjusted R² = 0.695)</p>
+<p><span class="math display">\[
+\text{Total AGB} = -361{,}904.73 + 15{,}020.66 \times z_{q95} + 35{,}671.60 \times z_{kurt}
+\]</span></p>
+<p><span class="math display">\[
+R^2 = 0.469 \qquad R^2_{\text{adj}} = 0.439
+\]</span></p>
+<p><span class="math display">\[
+\text{Dominant Height} = 3.555 + 0.910 \times z_{q95}
+\]</span></p>
+<p><span class="math display">\[
+R^2 = 0.703 \qquad R^2_{\text{adj}} = 0.695
+\]</span></p>
 <p>The dominant height model landed a really solid R² of 0.70 with just a single predictor, which speaks to how well upper canopy height percentiles capture actual tree height in a structurally complex forest.</p>
 </section>
 <section id="wall-to-wall-predictions" class="level2">
