@@ -15,7 +15,7 @@ website:
       - href: mangrovemapping.qmd
         text: Mangrove Mapping Research
       - href: lidarmetrics.qmd
-        text: Model Creation from LiDAR Metrics
+        text: LiDAR Terrain & Biomass Modelling
 format:
   html:
     theme: flatly
