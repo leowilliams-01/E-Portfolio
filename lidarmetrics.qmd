@@ -14,7 +14,7 @@ LiDAR point clouds capture the three-dimensional structure of a forest in extrao
 
 The first step was reading in the raw LiDAR catalog and cleaning it up. Duplicate points were filtered out and tiles were written to a cleaned output directory before anything else could happen. Nothing glamorous, but getting this right is what makes everything downstream reliable!
 
-```{r, eval=false, echo=true, warning=false, message=false}
+```{r, eval=FALSE, echo=TRUE, warning=FALSE, message=FALSE}
 library(lidR)
 library(terra)
 library(tidyverse)
@@ -28,7 +28,7 @@ cat_afrf <- filter_duplicates(cat_afrf)
 
 With clean data in hand, the next step was building a Digital Terrain Model (DTM) at 2m resolution using TIN interpolation across all ground returns. This DTM was then used to normalize the point cloud so that all heights are relative to the ground rather than sea level, which is a crucial step before any canopy analysis. After filtering out noise points below 0m and above 55m, a Canopy Height Model (CHM) was generated using the point-to-raster method.
 
-```{r, eval=false, echo=true, warning=false, message=false}
+```{r, eval=FALSE, echo=TRUE, warning=FALSE, message=FALSE}
 # Generate DTM from ground returns
 dem_allLAS_afrf <- rasterize_terrain(filtered_cat_afrf, 2, tin())
 
@@ -50,7 +50,7 @@ This was the part I found most satisfying. Field plot data provided ground truth
 
 Predictor selection followed an iterative process where candidate metrics were first screened for collinearity using pairwise scatterplots, then tested for significance using `add1()` with an F-test. For AGB, `zq95` (95th percentile of point heights) and `zkurt` (kurtosis of the height distribution) came out on top. For dominant height, `zq95` alone turned out to be the cleanest predictor once collinearity between candidates was accounted for. Sometimes simpler really is better!
 
-```{r, eval=false, echo=true, warning=false, message=false}
+```{r, eval=FALSE, echo=TRUE, warning=FALSE, message=FALSE}
 # AGB model — two predictors
 model_AGB <- lm(Total_AGB ~ zq95 + zkurt, data = data_table)
 
@@ -68,7 +68,7 @@ The dominant height model landed a really solid R² of 0.70 with just a single p
 
 The final step was scaling both models up to cover all of AFRF. Pixel-level LiDAR metrics were computed at 2m resolution across the full normalized catalog, the relevant predictor layers were extracted as rasters, and the model equations were applied using `terra::app()`.
 
-```{r, eval=false, echo=true, warning=false, message=false}
+```{r, eval=FALSE, echo=TRUE, warning=FALSE, message=FALSE}
 # Compute pixel-level metrics at 2m resolution
 pixel_metrics_afrf <- pixel_metrics(norm_cat_afrf, .stdmetrics, 2)
 

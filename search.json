@@ -11,7 +11,7 @@
     "href": "resume.html",
     "title": "Resume",
     "section": "",
-    "text": "markdown— title: “CV” format: html editor: visual —"
+    "text": "leo.williams.1122@gmail.com | LinkedIn | E-Portfolio"
   },
   {
     "objectID": "publications.html",
@@ -108,8 +108,8 @@
     "objectID": "resume.html#leo-williams",
     "href": "resume.html#leo-williams",
     "title": "Resume",
-    "section": "Leo Williams",
-    "text": "Leo Williams\nleo.williams.1122@gmail.com | LinkedIn | E-Portfolio"
+    "section": "",
+    "text": "leo.williams.1122@gmail.com | LinkedIn | E-Portfolio"
   },
   {
     "objectID": "resume.html#career-summary",
@@ -166,5 +166,47 @@
     "title": "Resume",
     "section": "Additional Skills",
     "text": "Additional Skills\n\nPADI Rescue Diver\nMountain Leadership Course (Scotland, 2016)"
+  },
+  {
+    "objectID": "lidarmetrics.html",
+    "href": "lidarmetrics.html",
+    "title": "LiDAR Terrain & Biomass Modelling",
+    "section": "",
+    "text": "One of the most exciting projects from my Advanced Remote Sensing course from my Masters at UBC. This lab had me working with airborne LiDAR data collected over the Alex Fraser Research Forest (AFRF) in British Columbia. Starting from raw point cloud tiles and finishing with wall-to-wall predictions of forest biomass and tree height across an entire research forest, this workflow pushed my R skills and gave me a real appreciation for just how much information is packed into a LiDAR dataset."
+  },
+  {
+    "objectID": "lidarmetrics.html#overview",
+    "href": "lidarmetrics.html#overview",
+    "title": "LiDAR Terrain & Biomass Modelling",
+    "section": "Overview",
+    "text": "Overview\nLiDAR point clouds capture the three-dimensional structure of a forest in extraordinary detail. This project moves from raw .las tiles through terrain and canopy modelling, field plot metric extraction, statistical model fitting, and finally spatially continuous predictions of above-ground biomass (AGB) and dominant tree height across AFRF, all built in R using the lidR and terra packages."
+  },
+  {
+    "objectID": "lidarmetrics.html#pre-processing",
+    "href": "lidarmetrics.html#pre-processing",
+    "title": "LiDAR Terrain & Biomass Modelling",
+    "section": "Pre-Processing",
+    "text": "Pre-Processing\nThe first step was reading in the raw LiDAR catalog and cleaning it up. Duplicate points were filtered out and tiles were written to a cleaned output directory before anything else could happen. Nothing glamorous, but getting this right is what makes everything downstream reliable!\n\nlibrary(lidR)\nlibrary(terra)\nlibrary(tidyverse)\n\ncat_afrf &lt;- readLAScatalog(\"LAS/\")\nopt_output_files(cat_afrf) &lt;- \"Filtered/filtered_afrf_{ID}\"\ncat_afrf &lt;- filter_duplicates(cat_afrf)"
+  },
+  {
+    "objectID": "lidarmetrics.html#terrain-canopy-modelling",
+    "href": "lidarmetrics.html#terrain-canopy-modelling",
+    "title": "LiDAR Terrain & Biomass Modelling",
+    "section": "Terrain & Canopy Modelling",
+    "text": "Terrain & Canopy Modelling\nWith clean data in hand, the next step was building a Digital Terrain Model (DTM) at 2m resolution using TIN interpolation across all ground returns. This DTM was then used to normalize the point cloud so that all heights are relative to the ground rather than sea level, which is a crucial step before any canopy analysis. After filtering out noise points below 0m and above 55m, a Canopy Height Model (CHM) was generated using the point-to-raster method.\n\n# Generate DTM from ground returns\ndem_allLAS_afrf &lt;- rasterize_terrain(filtered_cat_afrf, 2, tin())\n\n# Normalize point heights to ground level\nnorm_tiles_afrf &lt;- normalize_height(filtered_cat_afrf, dem_allLAS_afrf)\n\n# Remove noise and generate CHM\nopt_filter(norm_cat_afrf) &lt;- '-drop_z_below 0 -drop_z_above 55'\nchm_afrf &lt;- rasterize_canopy(norm_cat_afrf, 2, p2r())\n\n\n\n\nFigure 1 – Digital Terrain Model (DTM) of AFRF at 2m resolution, derived from TIN interpolation of ground returns.\n\n\n\n\n\nFigure 2 – Canopy Height Model (CHM) of AFRF at 2m resolution, showing vegetation heights above ground after point cloud normalization."
+  },
+  {
+    "objectID": "lidarmetrics.html#plot-metrics-model-fitting",
+    "href": "lidarmetrics.html#plot-metrics-model-fitting",
+    "title": "LiDAR Terrain & Biomass Modelling",
+    "section": "Plot Metrics & Model Fitting",
+    "text": "Plot Metrics & Model Fitting\nThis was the part I found most satisfying. Field plot data provided ground truth measurements of total AGB and dominant tree height across 38 plots. For each plot, a 30m radius clip was extracted from the normalized catalog and standard LiDAR metrics were computed, things like height percentiles, canopy density, and intensity statistics.\nPredictor selection followed an iterative process where candidate metrics were first screened for collinearity using pairwise scatterplots, then tested for significance using add1() with an F-test. For AGB, zq95 (95th percentile of point heights) and zkurt (kurtosis of the height distribution) came out on top. For dominant height, zq95 alone turned out to be the cleanest predictor once collinearity between candidates was accounted for. Sometimes simpler really is better!\n\n# AGB model — two predictors\nmodel_AGB &lt;- lm(Total_AGB ~ zq95 + zkurt, data = data_table)\n\n# Dominant height model — zq95 alone wins out\nmodel_domH &lt;- lm(Dominant_Height ~ zq95, data = data_table)\n\nAGB model: Total AGB = -361,904.73 + 15,020.66 * zq95 + 35,671.60 * zkurt (R² = 0.469, Adjusted R² = 0.439)\nDominant height model: Dominant Height = 3.555 + 0.910 * zq95 (R² = 0.703, Adjusted R² = 0.695)\nThe dominant height model landed a really solid R² of 0.70 with just a single predictor, which speaks to how well upper canopy height percentiles capture actual tree height in a structurally complex forest."
+  },
+  {
+    "objectID": "lidarmetrics.html#wall-to-wall-predictions",
+    "href": "lidarmetrics.html#wall-to-wall-predictions",
+    "title": "LiDAR Terrain & Biomass Modelling",
+    "section": "Wall-to-Wall Predictions",
+    "text": "Wall-to-Wall Predictions\nThe final step was scaling both models up to cover all of AFRF. Pixel-level LiDAR metrics were computed at 2m resolution across the full normalized catalog, the relevant predictor layers were extracted as rasters, and the model equations were applied using terra::app().\n\n# Compute pixel-level metrics at 2m resolution\npixel_metrics_afrf &lt;- pixel_metrics(norm_cat_afrf, .stdmetrics, 2)\n\n# Extract predictor rasters\nzq95_afrf &lt;- terra::subset(pixel_metrics_afrf, \"zq95\")\nzkurt_afrf &lt;- terra::subset(pixel_metrics_afrf, \"zkurt\")\n\n# Apply model functions wall-to-wall\ntotal_biomass &lt;- function(x){ -361904.73 + 15020.66*x[1] + 35671.60*x[2] }\ndominant_h &lt;- function(x){ 3.5554418 + 0.9101865*x }\n\ntotal_AGB_afrf &lt;- terra::app(c(zq95_afrf, zkurt_afrf), total_biomass)\ndominant_h_afrf &lt;- terra::app(zq95_afrf, dominant_h)\n\n\n\n\nFigure 3 – Predicted total above-ground biomass (AGB) across AFRF, modelled from LiDAR-derived zq95 and zkurt metrics.\n\n\n\n\n\nFigure 4 – Predicted dominant tree height across AFRF, modelled from the LiDAR-derived zq95 metric."
   }
 ]

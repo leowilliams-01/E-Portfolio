@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resume – Leo Williams E-Portfolio</title>
+<title>LiDAR Terrain &amp; Biomass Modelling – Leo Williams E-Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -95,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./resume.html" aria-current="page"> 
+    <a class="nav-link" href="./resume.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
@@ -107,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Mangrove Mapping Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./lidarmetrics.html"> 
+    <a class="nav-link active" href="./lidarmetrics.html" aria-current="page"> 
 <span class="menu-text">LiDAR Terrain &amp; Biomass Modelling</span></a>
   </li>  
 </ul>
@@ -126,15 +161,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#leo-williams" id="toc-leo-williams" class="nav-link active" data-scroll-target="#leo-williams">Leo Williams</a></li>
-  <li><a href="#career-summary" id="toc-career-summary" class="nav-link" data-scroll-target="#career-summary">Career Summary</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#technical-skills" id="toc-technical-skills" class="nav-link" data-scroll-target="#technical-skills">Technical Skills</a></li>
-  <li><a href="#languages" id="toc-languages" class="nav-link" data-scroll-target="#languages">Languages</a></li>
-  <li><a href="#work-experience" id="toc-work-experience" class="nav-link" data-scroll-target="#work-experience">Work Experience</a></li>
-  <li><a href="#relevant-projects" id="toc-relevant-projects" class="nav-link" data-scroll-target="#relevant-projects">Relevant Projects</a></li>
-  <li><a href="#professional-development" id="toc-professional-development" class="nav-link" data-scroll-target="#professional-development">Professional Development</a></li>
-  <li><a href="#additional-skills" id="toc-additional-skills" class="nav-link" data-scroll-target="#additional-skills">Additional Skills</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#pre-processing" id="toc-pre-processing" class="nav-link" data-scroll-target="#pre-processing">Pre-Processing</a></li>
+  <li><a href="#terrain-canopy-modelling" id="toc-terrain-canopy-modelling" class="nav-link" data-scroll-target="#terrain-canopy-modelling">Terrain &amp; Canopy Modelling</a></li>
+  <li><a href="#plot-metrics-model-fitting" id="toc-plot-metrics-model-fitting" class="nav-link" data-scroll-target="#plot-metrics-model-fitting">Plot Metrics &amp; Model Fitting</a></li>
+  <li><a href="#wall-to-wall-predictions" id="toc-wall-to-wall-predictions" class="nav-link" data-scroll-target="#wall-to-wall-predictions">Wall-to-Wall Predictions</a></li>
   </ul>
 </nav>
     </div>
@@ -143,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resume</h1>
+<h1 class="title">LiDAR Terrain &amp; Biomass Modelling</h1>
 </div>
 
 
@@ -160,97 +191,96 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="leo-williams" class="level2">
-<h2 class="anchored" data-anchor-id="leo-williams">Leo Williams</h2>
-<p>leo.williams.1122@gmail.com | <a href="https://www.linkedin.com/in/leo-williams-geospatial/">LinkedIn</a> | <a href="https://leowilliams-01.github.io/E-Portfolio/">E-Portfolio</a></p>
-<hr>
+<p>One of the most exciting projects from my Advanced Remote Sensing course from my Masters at UBC. This lab had me working with airborne LiDAR data collected over the Alex Fraser Research Forest (AFRF) in British Columbia. Starting from raw point cloud tiles and finishing with wall-to-wall predictions of forest biomass and tree height across an entire research forest, this workflow pushed my R skills and gave me a real appreciation for just how much information is packed into a LiDAR dataset.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>LiDAR point clouds capture the three-dimensional structure of a forest in extraordinary detail. This project moves from raw <code>.las</code> tiles through terrain and canopy modelling, field plot metric extraction, statistical model fitting, and finally spatially continuous predictions of above-ground biomass (AGB) and dominant tree height across AFRF, all built in R using the <code>lidR</code> and <code>terra</code> packages.</p>
 </section>
-<section id="career-summary" class="level2">
-<h2 class="anchored" data-anchor-id="career-summary">Career Summary</h2>
-<p>Environmental Scientist with graduate training in Geomatics for Environmental Management. I strive to further advance environmental and social justice. My understanding of ecology and environmental systems is complemented by strong skills in geospatial analysis, spatial data management, and environmental mapping. Living and working across four different continents have given me strong traits of adaptability, communication, and the ability to collaborate effectively in diverse and dynamic environments.</p>
-<hr>
+<section id="pre-processing" class="level2">
+<h2 class="anchored" data-anchor-id="pre-processing">Pre-Processing</h2>
+<p>The first step was reading in the raw LiDAR catalog and cleaning it up. Duplicate points were filtered out and tiles were written to a cleaned output directory before anything else could happen. Nothing glamorous, but getting this right is what makes everything downstream reliable!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lidR)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cat_afrf <span class="ot">&lt;-</span> <span class="fu">readLAScatalog</span>(<span class="st">"LAS/"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">opt_output_files</span>(cat_afrf) <span class="ot">&lt;-</span> <span class="st">"Filtered/filtered_afrf_{ID}"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>cat_afrf <span class="ot">&lt;-</span> <span class="fu">filter_duplicates</span>(cat_afrf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<p><strong>Master of Geomatics for Environmental Management</strong> | University of British Columbia | <em>Expected 2026</em></p>
-<p><strong>BSc Environmental Geography</strong> | Concordia University | <em>2024</em></p>
-<hr>
+<section id="terrain-canopy-modelling" class="level2">
+<h2 class="anchored" data-anchor-id="terrain-canopy-modelling">Terrain &amp; Canopy Modelling</h2>
+<p>With clean data in hand, the next step was building a Digital Terrain Model (DTM) at 2m resolution using TIN interpolation across all ground returns. This DTM was then used to normalize the point cloud so that all heights are relative to the ground rather than sea level, which is a crucial step before any canopy analysis. After filtering out noise points below 0m and above 55m, a Canopy Height Model (CHM) was generated using the point-to-raster method.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate DTM from ground returns</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dem_allLAS_afrf <span class="ot">&lt;-</span> <span class="fu">rasterize_terrain</span>(filtered_cat_afrf, <span class="dv">2</span>, <span class="fu">tin</span>())</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize point heights to ground level</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>norm_tiles_afrf <span class="ot">&lt;-</span> <span class="fu">normalize_height</span>(filtered_cat_afrf, dem_allLAS_afrf)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove noise and generate CHM</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">opt_filter</span>(norm_cat_afrf) <span class="ot">&lt;-</span> <span class="st">'-drop_z_below 0 -drop_z_above 55'</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>chm_afrf <span class="ot">&lt;-</span> <span class="fu">rasterize_canopy</span>(norm_cat_afrf, <span class="dv">2</span>, <span class="fu">p2r</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/DEM_afrf.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1 – Digital Terrain Model (DTM) of AFRF at 2m resolution, derived from TIN interpolation of ground returns.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CHM_afrf.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2 – Canopy Height Model (CHM) of AFRF at 2m resolution, showing vegetation heights above ground after point cloud normalization.</figcaption>
+</figure>
+</div>
 </section>
-<section id="technical-skills" class="level2">
-<h2 class="anchored" data-anchor-id="technical-skills">Technical Skills</h2>
-<p><strong>GIS &amp; Spatial Tools</strong> | ArcGIS Pro, ArcGIS Desktop/Online, ESRI Field Maps, QGIS, FME, Google Earth Engine</p>
-<p><strong>Programming &amp; Data</strong> | Python (ArcPy, geospatial workflows), R, SQL</p>
-<p><strong>LiDAR &amp; Remote Sensing</strong> | LiDAR (lidR, terrain modelling), Raster analysis, Terrain Modelling</p>
-<p><strong>Web &amp; Visualization</strong> | Professional Map Layout Design, HTML, CSS, JavaScript</p>
-<hr>
+<section id="plot-metrics-model-fitting" class="level2">
+<h2 class="anchored" data-anchor-id="plot-metrics-model-fitting">Plot Metrics &amp; Model Fitting</h2>
+<p>This was the part I found most satisfying. Field plot data provided ground truth measurements of total AGB and dominant tree height across 38 plots. For each plot, a 30m radius clip was extracted from the normalized catalog and standard LiDAR metrics were computed, things like height percentiles, canopy density, and intensity statistics.</p>
+<p>Predictor selection followed an iterative process where candidate metrics were first screened for collinearity using pairwise scatterplots, then tested for significance using <code>add1()</code> with an F-test. For AGB, <code>zq95</code> (95th percentile of point heights) and <code>zkurt</code> (kurtosis of the height distribution) came out on top. For dominant height, <code>zq95</code> alone turned out to be the cleanest predictor once collinearity between candidates was accounted for. Sometimes simpler really is better!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AGB model — two predictors</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>model_AGB <span class="ot">&lt;-</span> <span class="fu">lm</span>(Total_AGB <span class="sc">~</span> zq95 <span class="sc">+</span> zkurt, <span class="at">data =</span> data_table)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Dominant height model — zq95 alone wins out</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>model_domH <span class="ot">&lt;-</span> <span class="fu">lm</span>(Dominant_Height <span class="sc">~</span> zq95, <span class="at">data =</span> data_table)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>AGB model:</strong> Total AGB = -361,904.73 + 15,020.66 * zq95 + 35,671.60 * zkurt (R² = 0.469, Adjusted R² = 0.439)</p>
+<p><strong>Dominant height model:</strong> Dominant Height = 3.555 + 0.910 * zq95 (R² = 0.703, Adjusted R² = 0.695)</p>
+<p>The dominant height model landed a really solid R² of 0.70 with just a single predictor, which speaks to how well upper canopy height percentiles capture actual tree height in a structurally complex forest.</p>
 </section>
-<section id="languages" class="level2">
-<h2 class="anchored" data-anchor-id="languages">Languages</h2>
-<p>English (Fluent) | French (Fluent) | Spanish (Proficient)</p>
-<hr>
-</section>
-<section id="work-experience" class="level2">
-<h2 class="anchored" data-anchor-id="work-experience">Work Experience</h2>
-<p><strong>Teaching Assistant (Geomatics)</strong> | University of British Columbia, Vancouver | <em>2026 - Present</em></p>
-<ul>
-<li>Lead laboratory sessions for NRES 341 (Intermediate Geomatics for Natural Resource Management).</li>
-<li>Support students in applying remote sensing data and GIS workflows in ArcGIS Pro for spatial analysis and environmental mapping.</li>
-<li>Provide guidance on coordinate systems, projections, and spatial data transformations.</li>
-</ul>
-<p><strong>Researcher</strong> | Blue Ventures, Guinea-Bissau | <em>2025 - Present</em></p>
-<ul>
-<li>Geospatial analysis of mangrove ecosystem dynamics using multi-temporal satellite imagery.</li>
-<li>Develop reproducible classification workflows in Google Earth Engine to map mangrove extent and canopy structure.</li>
-<li>Conduct change detection analysis to quantify loss, gain, and persistence.</li>
-<li>Produce high-quality cartographic outputs and spatial summaries.</li>
-<li>Validate random forest classification through accuracy assessment and confusion matrix evaluation.</li>
-</ul>
-<p><strong>Green Brigade Ambassador</strong> | Enuf, Montreal | <em>March - August 2025</em></p>
-<ul>
-<li>Educated high school students on proper waste sorting and composting practices as part of Enuf’s Green Brigade Sustainability Program.</li>
-</ul>
-<p><strong>Intern</strong> | Marine Research Foundation, Malaysia | <em>April - August 2024</em></p>
-<ul>
-<li>Performed spatio-temporal analysis of shark and ray bycatch within fisheries around Malaysia.</li>
-<li>Mapped data used to inform time-area closure conservation policies for MPAs.</li>
-</ul>
-<p><strong>Intern</strong> | Virunga National Park, Democratic Republic of Congo | <em>April - August 2024</em></p>
-<ul>
-<li>Created a sales database with three years of data for a workshop staffed by widows of Park Rangers killed in the field.</li>
-</ul>
-<p><strong>Supervisor</strong> | Allez Up Centre Escalade, Montreal | <em>August 2022 - December 2024</em></p>
-<ul>
-<li>Working at the front desk and as a Barista.</li>
-<li>Instructed weekly bouldering classes at the beginner and intermediate levels.</li>
-</ul>
-<hr>
-</section>
-<section id="relevant-projects" class="level2">
-<h2 class="anchored" data-anchor-id="relevant-projects">Relevant Projects</h2>
-<p><strong>LiDAR-Based Terrain Modelling</strong> | Squamish, BC</p>
-<ul>
-<li>Processed large LiDAR point cloud datasets using R (lidR) to generate high-resolution DTMs.</li>
-<li>Performed terrain feature extraction and raster analysis workflows.</li>
-</ul>
-<p><strong>Mangrove Classification &amp; Change Detection</strong> | Guinea-Bissau</p>
-<ul>
-<li>Processed multi-temporal satellite imagery (Sentinel-2) and trained a random forest algorithm to classify mangrove forests in West Africa.</li>
-<li>Generated classified raster outputs.</li>
-<li>Produced final cartographic deliverables following professional mapping standards.</li>
-</ul>
-<hr>
-</section>
-<section id="professional-development" class="level2">
-<h2 class="anchored" data-anchor-id="professional-development">Professional Development</h2>
-<p><strong>FME Skills Workshop</strong> | Vancouver | <em>2025</em></p>
-<hr>
-</section>
-<section id="additional-skills" class="level2">
-<h2 class="anchored" data-anchor-id="additional-skills">Additional Skills</h2>
-<ul>
-<li>PADI Rescue Diver</li>
-<li>Mountain Leadership Course (Scotland, 2016)</li>
-</ul>
+<section id="wall-to-wall-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="wall-to-wall-predictions">Wall-to-Wall Predictions</h2>
+<p>The final step was scaling both models up to cover all of AFRF. Pixel-level LiDAR metrics were computed at 2m resolution across the full normalized catalog, the relevant predictor layers were extracted as rasters, and the model equations were applied using <code>terra::app()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute pixel-level metrics at 2m resolution</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>pixel_metrics_afrf <span class="ot">&lt;-</span> <span class="fu">pixel_metrics</span>(norm_cat_afrf, .stdmetrics, <span class="dv">2</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract predictor rasters</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>zq95_afrf <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">subset</span>(pixel_metrics_afrf, <span class="st">"zq95"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>zkurt_afrf <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">subset</span>(pixel_metrics_afrf, <span class="st">"zkurt"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply model functions wall-to-wall</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>total_biomass <span class="ot">&lt;-</span> <span class="cf">function</span>(x){ <span class="sc">-</span><span class="fl">361904.73</span> <span class="sc">+</span> <span class="fl">15020.66</span><span class="sc">*</span>x[<span class="dv">1</span>] <span class="sc">+</span> <span class="fl">35671.60</span><span class="sc">*</span>x[<span class="dv">2</span>] }</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>dominant_h <span class="ot">&lt;-</span> <span class="cf">function</span>(x){ <span class="fl">3.5554418</span> <span class="sc">+</span> <span class="fl">0.9101865</span><span class="sc">*</span>x }</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>total_AGB_afrf <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">app</span>(<span class="fu">c</span>(zq95_afrf, zkurt_afrf), total_biomass)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>dominant_h_afrf <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">app</span>(zq95_afrf, dominant_h)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/total_agb.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3 – Predicted total above-ground biomass (AGB) across AFRF, modelled from LiDAR-derived zq95 and zkurt metrics.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dominant_height.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4 – Predicted dominant tree height across AFRF, modelled from the LiDAR-derived zq95 metric.</figcaption>
+</figure>
+</div>
 
 
 </section>
