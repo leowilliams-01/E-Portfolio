@@ -264,6 +264,16 @@ a:hover {
   border-bottom: 1px solid #2d5a4e;
 }
 
+/* ── Project card hover ── */
+.project-card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
 /* ── Code blocks ── */
 pre {
   background-color: #f2f2f2;
