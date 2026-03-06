@@ -208,5 +208,47 @@
     "title": "LiDAR Terrain & Biomass Modelling",
     "section": "Wall-to-Wall Predictions",
     "text": "Wall-to-Wall Predictions\nThe final step was scaling both models up to cover all of AFRF. Pixel-level LiDAR metrics were computed at 2m resolution across the full normalized catalog, the relevant predictor layers were extracted as rasters, and the model equations were applied using terra::app().\n\n# Compute pixel-level metrics at 2m resolution\npixel_metrics_afrf &lt;- pixel_metrics(norm_cat_afrf, .stdmetrics, 2)\n\n# Extract predictor rasters\nzq95_afrf &lt;- terra::subset(pixel_metrics_afrf, \"zq95\")\nzkurt_afrf &lt;- terra::subset(pixel_metrics_afrf, \"zkurt\")\n\n# Apply model functions wall-to-wall\ntotal_biomass &lt;- function(x){ -361904.73 + 15020.66*x[1] + 35671.60*x[2] }\ndominant_h &lt;- function(x){ 3.5554418 + 0.9101865*x }\n\ntotal_AGB_afrf &lt;- terra::app(c(zq95_afrf, zkurt_afrf), total_biomass)\ndominant_h_afrf &lt;- terra::app(zq95_afrf, dominant_h)\n\n\n\n\nFigure 3 – Predicted total above-ground biomass (AGB) across AFRF, modelled from LiDAR-derived zq95 and zkurt metrics.\n\n\n\n\n\nFigure 4 – Predicted dominant tree height across AFRF, modelled from the LiDAR-derived zq95 metric."
+  },
+  {
+    "objectID": "salmon_stream.html",
+    "href": "salmon_stream.html",
+    "title": "Salmon Stream Network Analysis",
+    "section": "",
+    "text": "This project was completed as part of my Advanced GIS course at UBC. The goal was to model a stream network for Vancouver Island from a digital elevation model and use it to identify accessible salmon spawning habitat, taking into account dams as barriers to upstream migration. It was a great exercise in combining raster hydrology, network topology, and linear referencing into one end-to-end workflow."
+  },
+  {
+    "objectID": "salmon_stream.html#overview",
+    "href": "salmon_stream.html#overview",
+    "title": "Salmon Stream Network Analysis",
+    "section": "Overview",
+    "text": "Overview\nPacific salmon are diadromous, spending their lives between the ocean and freshwater, returning to spawn in the same streams where they were born. Identifying where salmon can actually reach is therefore a real conservation question, and one that GIS is well suited to answer. This project focuses on Vancouver Island, using ArcGIS Pro to derive a stream network from a DEM, model dams as movement barriers, and evaluate stream segments against basic habitat criteria for spawning suitability."
+  },
+  {
+    "objectID": "salmon_stream.html#methods",
+    "href": "salmon_stream.html#methods",
+    "title": "Salmon Stream Network Analysis",
+    "section": "Methods",
+    "text": "Methods\nThe workflow began with a pre-processed 25m DEM of Vancouver Island. Flow direction and flow accumulation rasters were derived from the DEM, and a threshold of 1,000 contributing pixels was used to define the stream network. Stream links and stream order were calculated across the island, and the raster streams were converted to polyline features.\n\n\n\n\n\nFigure 1 – Diagram of Hydrological Analysis done in this Workflow.\nStream polylines were then converted to routes and loaded into a geodatabase feature dataset alongside a dam layer sourced from the BC Government. Network topology was used to identify two sets of junction points: where dams intersect stream routes, and where streams reach the ocean boundary. These junctions were used to parameterise a trace network, which was run from ocean entry points upstream, with dams acting as hard barriers. This produced a classification of stream segments into reachable and impeded reaches.\nSlope and stream order attributes were recorded along each route using linear referencing, and an overlay of the two event tables produced a single attribute table covering gradient and order for every stream segment. A final query identified accessible salmon habitat as segments that were reachable from the ocean, were first or second order streams, and had a gradient below 20%."
+  },
+  {
+    "objectID": "salmon_stream.html#results",
+    "href": "salmon_stream.html#results",
+    "title": "Salmon Stream Network Analysis",
+    "section": "Results",
+    "text": "Results\n\n\n\n\n\nFigure 2 – Map highlighting salmon river mobility in the Nahwitti Lowland Coho Salmon Conservation Area.\nThe final map shows stream routes symbolised by reachability, dam barrier locations, and the distribution of accessible versus inaccessible salmon habitat segments across the selected conservation unit. Accessible habitat is concentrated along lower order tributaries near the coast, while dams fragment connectivity across several major river systems."
+  },
+  {
+    "objectID": "salmon_stream.html#reflection",
+    "href": "salmon_stream.html#reflection",
+    "title": "Salmon Stream Network Analysis",
+    "section": "Reflection",
+    "text": "Reflection\nWhat I found most interesting about this lab was how much information you can extract from a single elevation raster. Flow direction, accumulation, slope, stream order, and network connectivity all cascade out of one input. The linear referencing approach for recording stream attributes was new to me and genuinely useful, as it allows you to store spatially varying information along a route without needing to split the geometry. The topology workflow for snapping dam and ocean junctions to stream routes was fiddly but the logic behind it made sense once it clicked."
+  },
+  {
+    "objectID": "salmon_stream.html#what-i-found-most-interesting-about-this-lab-was-how-much-information-you-can-extract-from-a-single-elevation-raster.-flow-direction-accumulation-slope-stream-order-and-network-connectivity-all-cascade-out-of-one-input.-the-linear-referencing-approach-for-recording-stream-attributes-was-new-to-me-and-genuinely-useful-as-it-allows-you-to-store-spatially-varying-information-along-a-route-without-needing-to-split-the-geometry.-the-topology-workflow-for-snapping-dam-and-ocean-junctions-to-stream-routes-was-fiddly-but-the-logic-behind-it-made-sense-once-it-clicked.",
+    "href": "salmon_stream.html#what-i-found-most-interesting-about-this-lab-was-how-much-information-you-can-extract-from-a-single-elevation-raster.-flow-direction-accumulation-slope-stream-order-and-network-connectivity-all-cascade-out-of-one-input.-the-linear-referencing-approach-for-recording-stream-attributes-was-new-to-me-and-genuinely-useful-as-it-allows-you-to-store-spatially-varying-information-along-a-route-without-needing-to-split-the-geometry.-the-topology-workflow-for-snapping-dam-and-ocean-junctions-to-stream-routes-was-fiddly-but-the-logic-behind-it-made-sense-once-it-clicked.",
+    "title": "Salmon Stream Network Analysis",
+    "section": "What I found most interesting about this lab was how much information you can extract from a single elevation raster. Flow direction, accumulation, slope, stream order, and network connectivity all cascade out of one input. The linear referencing approach for recording stream attributes was new to me and genuinely useful, as it allows you to store spatially varying information along a route without needing to split the geometry. The topology workflow for snapping dam and ocean junctions to stream routes was fiddly but the logic behind it made sense once it clicked.",
+    "text": "What I found most interesting about this lab was how much information you can extract from a single elevation raster. Flow direction, accumulation, slope, stream order, and network connectivity all cascade out of one input. The linear referencing approach for recording stream attributes was new to me and genuinely useful, as it allows you to store spatially varying information along a route without needing to split the geometry. The topology workflow for snapping dam and ocean junctions to stream routes was fiddly but the logic behind it made sense once it clicked."
   }
 ]

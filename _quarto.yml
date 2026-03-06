@@ -18,6 +18,8 @@ website:
         text: Mangrove Mapping
       - href: lidarmetrics.qmd
         text: LiDAR Terrain & Biomass
+      - href: salmon_stream.qmd
+        text: Salmon Stream Network
 format:
   html:
     theme: flatly
